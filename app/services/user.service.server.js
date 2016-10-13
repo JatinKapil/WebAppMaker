@@ -17,7 +17,6 @@ module.exports = function(app){
 		var newUser = req.body;
 		newUser._id = (new Date()).getTime()+"";
 		users.push(newUser);
-		console.log(users);
 		res.send(newUser);
 	}
 
