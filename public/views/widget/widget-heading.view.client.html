@@ -1,0 +1,73 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <p class="navbar-text pull-left">
+	        <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new" class="navbar-link">
+	          <span class="glyphicon glyphicon-chevron-left">
+	          </span>
+	        </a>
+	      </p>
+	      <a class="navbar-brand" href="#">
+	        Widget Edit        
+	      </a>	      
+	      <p class="navbar-text pull-right">
+	        <a ng-click="model.createHeading(name,text,size)" class="navbar-link">
+	          <span class="glyphicon glyphicon-ok">
+	          </span>
+	        </a>
+	      </p>
+	    </div>
+	  </div>
+	</nav>
+<div class="container">	
+		<div ng-show="model.error" class="alert alert-danger">
+		{{model.error}}
+		</div>
+		
+		<form>
+		  <div class="form-group">
+		    <label for="widget-name">Name</label>
+		    <input ng-model="name" type="text" class="form-control" 
+		    		id="widget-name" placeholder="" >
+		  </div>
+		  <div class="form-group">
+		    <label for="heading-text">Text</label>
+			<input ng-model="text" type="text" class="form-control" 
+		    		id="heading-text" placeholder="" >		  
+		  </div>
+		  <div class="form-group">
+		    <label for="heading-size">Size</label>
+			<input ng-model="size" type="text" class="form-control" 
+		    		id="heading-size" placeholder="" >		  
+		  </div>
+		  
+		</form>
+	
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+	  <div class="container">
+	    <div class="row navbar-text">
+		  <div class="col-xs-3 text-center">
+	          <a href="#">
+	            <span class="glyphicon glyphicon-ok"></span>
+	          </a>
+	      </div>
+	      <div class="col-xs-3 text-center">
+	          <a href="#">
+	            <span class="glyphicon glyphicon-plus"></span>
+	          </a>
+	      </div>
+	      <div class="col-xs-3 text-center">
+	          <a href="#">
+	            <span class="glyphicon glyphicon-star"></span>
+	          </a>
+	      </div>
+	      <div class="col-xs-3 text-center">
+	          <a href="#">
+	            <span class="glyphicon glyphicon-heart"></span>
+	          </a>
+	      </div>
+	    </div>
+	  </div>
+	</nav>  
+</div>	
+	
