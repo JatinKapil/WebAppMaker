@@ -1,7 +1,9 @@
 module.exports = function(app) {
 
-	require("./services/user.service.server.js")(app);
-	require("./services/website.service.server.js")(app);
+	var models = require("./models/models.server")();
+
+	require("./services/user.service.server.js")(app, models);
+	require("./services/website.service.server.js")(app, models);
 
 	app.get("/users", function(req, res) {
 		res.send(users);

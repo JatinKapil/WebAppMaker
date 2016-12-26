@@ -21,7 +21,6 @@
 					lastName : ""
 			};
 			return $http.post("/api/user", newUser);
-
 		}
 
 		function deleteUser(id) {
